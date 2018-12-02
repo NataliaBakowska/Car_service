@@ -14,7 +14,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showBackButton()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.tintColor = Colors.orange
+
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

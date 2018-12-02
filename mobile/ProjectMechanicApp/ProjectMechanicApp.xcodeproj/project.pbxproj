@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28FF8BA338460C0BB8945900 /* Pods_ProjectMechanicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D21AAF6EDAE015A04BE07DA /* Pods_ProjectMechanicApp.framework */; };
+		3C3AC12321B42C2B007B79CB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3AC12221B42C2B007B79CB /* MenuViewController.swift */; };
 		3C434BE921AD984400888D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C434BE821AD984400888D39 /* AppDelegate.swift */; };
 		3C434BEB21AD984400888D39 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C434BEA21AD984400888D39 /* LoginViewController.swift */; };
 		3C434BEE21AD984400888D39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C434BEC21AD984400888D39 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		12786281B2F84BF8E8B4BDB9 /* Pods-ProjectMechanicAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectMechanicAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectMechanicAppUITests/Pods-ProjectMechanicAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D1BA9935AD705A056127990 /* Pods-ProjectMechanicAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectMechanicAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectMechanicAppUITests/Pods-ProjectMechanicAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3C3AC12221B42C2B007B79CB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3C434BE521AD984400888D39 /* ProjectMechanicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectMechanicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C434BE821AD984400888D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C434BEA21AD984400888D39 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C3AC12121B42C05007B79CB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C434BEA21AD984400888D39 /* LoginViewController.swift */,
+				3C3AC12221B42C2B007B79CB /* MenuViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		3C434BDC21AD984400888D39 = {
 			isa = PBXGroup;
 			children = (
@@ -122,10 +133,10 @@
 		3C434BE721AD984400888D39 /* ProjectMechanicApp */ = {
 			isa = PBXGroup;
 			children = (
+				3C3AC12121B42C05007B79CB /* ViewControllers */,
 				3C434C1C21ADB60400888D39 /* Constans */,
 				3C434C1921ADAAFB00888D39 /* NavigatableController */,
 				3C434BE821AD984400888D39 /* AppDelegate.swift */,
-				3C434BEA21AD984400888D39 /* LoginViewController.swift */,
 				3C434BEC21AD984400888D39 /* Main.storyboard */,
 				3C434BF221AD984600888D39 /* Assets.xcassets */,
 				3C434BF421AD984600888D39 /* LaunchScreen.storyboard */,
@@ -350,10 +361,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ProjectMechanicApp/Pods-ProjectMechanicApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -406,6 +419,7 @@
 				3C434C2021ADC0F400888D39 /* CustomNavigationBar.swift in Sources */,
 				3C434BEB21AD984400888D39 /* LoginViewController.swift in Sources */,
 				3C434BF121AD984500888D39 /* ProjectMechanicApp.xcdatamodeld in Sources */,
+				3C3AC12321B42C2B007B79CB /* MenuViewController.swift in Sources */,
 				3C434C1E21ADB64D00888D39 /* Constans.swift in Sources */,
 				3C434BE921AD984400888D39 /* AppDelegate.swift in Sources */,
 				3C434C1B21ADAB2500888D39 /* MainViewController.swift in Sources */,
@@ -586,6 +600,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U8BR229Y5C;
 				INFOPLIST_FILE = ProjectMechanicApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -608,6 +623,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U8BR229Y5C;
 				INFOPLIST_FILE = ProjectMechanicApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

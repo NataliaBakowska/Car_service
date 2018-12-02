@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (4.7.2)
+  - SkyFloatingLabelTextField (3.4.1)
 
 DEPENDENCIES:
   - Alamofire
+  - SkyFloatingLabelTextField
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - SkyFloatingLabelTextField
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  SkyFloatingLabelTextField: 8085f20f57f74a00cfcae58099299faa1a971035
 
-PODFILE CHECKSUM: 506c143b0a6d2207a9b4e0a82d2b6f811477cf31
+PODFILE CHECKSUM: 92042affa56912b6846f14affcbced94104efb59
 
 COCOAPODS: 1.5.3
