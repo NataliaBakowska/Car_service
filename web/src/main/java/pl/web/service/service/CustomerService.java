@@ -1,5 +1,6 @@
 package pl.web.service.service;
 
+import pl.web.service.model.Car;
 import pl.web.service.model.Customer;
 import pl.web.service.repository.CustomerRepository;
 
@@ -19,5 +20,10 @@ public class CustomerService {
 
     public void deleteCustomer(Long id){
         customerRepository.deleteById(id);
+    }
+
+    public void updateCustomer(Long id, Customer newCustomer) {
+        Customer customerToEdit = customerRepository.findById(id).get();
+        customerToEdit = newCustomer;
     }
 }

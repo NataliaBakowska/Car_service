@@ -1,5 +1,6 @@
 package pl.web.service.service;
 
+import pl.web.service.model.Car;
 import pl.web.service.model.Repair;
 import pl.web.service.repository.RepairRepository;
 
@@ -19,5 +20,10 @@ public class RepairService {
 
     public void deleteRepair(Long id){
         repairRepository.deleteById(id);
+    }
+
+    public void updateRepair(Long id, Repair newRepair) {
+        Repair repairToEdit = repairRepository.findById(id).get();
+        repairToEdit = newRepair;
     }
 }

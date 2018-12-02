@@ -20,4 +20,9 @@ public class CarService {
     public void deleteCar(Long id){
         carRepository.deleteById(id);
     }
+
+    public void updateCar(Long id, Car newCar) {
+        Car carToEdit = carRepository.findById(id).get();
+        carToEdit = newCar;
+    }
 }
