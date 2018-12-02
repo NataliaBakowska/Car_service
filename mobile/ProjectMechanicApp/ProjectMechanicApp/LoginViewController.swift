@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ViewController: MainViewController {
+class LoginViewController: MainViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Project Mechanic"
+        self.title = "CAR SERVICE"
     }
 }
 

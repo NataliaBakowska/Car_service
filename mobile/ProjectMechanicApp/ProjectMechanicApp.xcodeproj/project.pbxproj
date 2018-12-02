@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		28FF8BA338460C0BB8945900 /* Pods_ProjectMechanicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D21AAF6EDAE015A04BE07DA /* Pods_ProjectMechanicApp.framework */; };
 		3C434BE921AD984400888D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C434BE821AD984400888D39 /* AppDelegate.swift */; };
-		3C434BEB21AD984400888D39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C434BEA21AD984400888D39 /* ViewController.swift */; };
+		3C434BEB21AD984400888D39 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C434BEA21AD984400888D39 /* LoginViewController.swift */; };
 		3C434BEE21AD984400888D39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C434BEC21AD984400888D39 /* Main.storyboard */; };
 		3C434BF121AD984500888D39 /* ProjectMechanicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C434BEF21AD984500888D39 /* ProjectMechanicApp.xcdatamodeld */; };
 		3C434BF321AD984600888D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C434BF221AD984600888D39 /* Assets.xcassets */; };
@@ -45,7 +45,7 @@
 		2D1BA9935AD705A056127990 /* Pods-ProjectMechanicAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectMechanicAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectMechanicAppUITests/Pods-ProjectMechanicAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3C434BE521AD984400888D39 /* ProjectMechanicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectMechanicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C434BE821AD984400888D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C434BEA21AD984400888D39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3C434BEA21AD984400888D39 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C434BED21AD984400888D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C434BF021AD984500888D39 /* ProjectMechanicApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectMechanicApp.xcdatamodel; sourceTree = "<group>"; };
 		3C434BF221AD984600888D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 				3C434C1C21ADB60400888D39 /* Constans */,
 				3C434C1921ADAAFB00888D39 /* NavigatableController */,
 				3C434BE821AD984400888D39 /* AppDelegate.swift */,
-				3C434BEA21AD984400888D39 /* ViewController.swift */,
+				3C434BEA21AD984400888D39 /* LoginViewController.swift */,
 				3C434BEC21AD984400888D39 /* Main.storyboard */,
 				3C434BF221AD984600888D39 /* Assets.xcassets */,
 				3C434BF421AD984600888D39 /* LaunchScreen.storyboard */,
@@ -404,7 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C434C2021ADC0F400888D39 /* CustomNavigationBar.swift in Sources */,
-				3C434BEB21AD984400888D39 /* ViewController.swift in Sources */,
+				3C434BEB21AD984400888D39 /* LoginViewController.swift in Sources */,
 				3C434BF121AD984500888D39 /* ProjectMechanicApp.xcdatamodeld in Sources */,
 				3C434C1E21ADB64D00888D39 /* Constans.swift in Sources */,
 				3C434BE921AD984400888D39 /* AppDelegate.swift in Sources */,
