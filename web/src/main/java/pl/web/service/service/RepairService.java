@@ -1,13 +1,16 @@
 package pl.web.service.service;
 
-import pl.web.service.model.Car;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pl.web.service.model.Repair;
 import pl.web.service.repository.RepairRepository;
 
 import java.util.Optional;
 
+@Service
 public class RepairService {
 
+    @Autowired
     RepairRepository repairRepository;
 
     public void saveAction(Repair repair) {

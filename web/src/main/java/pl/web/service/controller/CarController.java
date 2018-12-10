@@ -1,7 +1,42 @@
 package pl.web.service.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import pl.web.service.model.Car;
+import pl.web.service.repository.CarRepository;
 
-@Controller
+import java.util.List;
+
+@RestController
 public class CarController {
+
+    @Autowired
+    private CarRepository carRepository;
+
+    @GetMapping("car/save")
+    private ResponseEntity saveCar() {
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    @PostMapping("/car/save")
+    public ResponseEntity saveCar(@RequestBody Car car) {
+        carRepository.save(car);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    @GetMapping("/car/{id}")
+    @ResponseBody
+    public Car getCar(@PathVariable Long id) {
+        return carRepository.findById(id).get();
+    }
+
+    @GetMapping("/car/all")
+    @ResponseBody
+    public List<Car> getllCars() {
+        return carRepository.findAll();
+    }
+
+
 }

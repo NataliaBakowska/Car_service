@@ -1,5 +1,7 @@
 package pl.web.service.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,23 +14,48 @@ import javax.persistence.*;
  * Class representing a single service. Related to one car and one customer, defined by specific time, costs and units.
  */
 @Entity(name = "repairs")
-@Getter @Setter @NoArgsConstructor
 public class Repair {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonProperty("id")
     private Long id;
 
     @ManyToOne
+    @JsonProperty("car")
     private Car car;
 
+    @JsonProperty("startDate")
     private DateTime startDate;
 
+    @JsonProperty("endDate")
     private DateTime endDate;
 
     //possible change to List<Units>
+    @JsonProperty("units")
     private String units;
 
+    @JsonProperty("costs")
     private Double costs;
 
+    public Repair() {
+    }
+
+    public Repair(Car car, DateTime startDate, Double costs) {
+        this.car = car;
+        this.startDate = startDate;
+        this.costs = costs;
+    }
+
+    @Override
+    public String toString() {
+        return "Repair{" +
+                "id=" + id +
+                ", car=" + car +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", units='" + units + '\'' +
+                ", costs=" + costs +
+                '}';
+    }
 }

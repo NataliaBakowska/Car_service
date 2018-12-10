@@ -1,15 +1,18 @@
 package pl.web.service.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pl.web.service.model.Car;
 import pl.web.service.repository.CarRepository;
-
 import java.util.Optional;
 
+@Service
 public class CarService {
 
+    @Autowired
     CarRepository carRepository;
 
-    public void saveAction(Car car) {
+    public void saveCar(Car car) {
         carRepository.save(car);
     }
 
