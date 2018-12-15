@@ -1,5 +1,6 @@
 package pl.web.service.service;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.web.service.model.Car;
@@ -34,6 +35,18 @@ public class CustomerService {
     public void updateCustomer(Long id, Customer newCustomer) {
         Customer customerToEdit = customerRepository.findById(id).get();
         customerToEdit = newCustomer;
+    }
+
+    public Customer findLoggingUser(Long telephoneNumber, String password) {
+        return customerRepository.findCustomerByTelephoneNumberAndPassword(telephoneNumber, password);
+    }
+
+    public String generatePassword() {
+        return RandomStringUtils.randomAlphabetic(6);
+    }
+
+    public List<Customer> getCustomersByNames(String firstName, String lastName) {
+        return customerRepository.findAllByFirstNameAndLastName(firstName, lastName);
     }
 
 

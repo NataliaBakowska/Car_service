@@ -3,11 +3,10 @@ package pl.web.service.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pl.web.service.model.Customer;
+import pl.web.service.model.CustomerDto;
 import pl.web.service.service.CustomerService;
-import springfox.documentation.spring.web.json.Json;
 
 import java.util.List;
 
@@ -24,6 +23,7 @@ public class CustomerController {
 
     @PostMapping("/customer/save")
     public ResponseEntity saveCustomer(@RequestBody Customer customer) {
+        customer.setPassword(customerService.generatePassword());
         customerService.saveCustomer(customer);
         return ResponseEntity.ok(HttpStatus.OK);
     }
@@ -38,5 +38,31 @@ public class CustomerController {
     @ResponseBody
     public List<Customer> getAllCustomers () {
         return customerService.getAll();
+    }
+
+    @GetMapping("/customer/{firstName}/{lastName}")
+    @ResponseBody
+    public Object getAllCustomersByName(@PathVariable String firstName, @PathVariable String lastName) {
+        List <Customer> customers = customerService.getCustomersByNames(firstName, lastName);
+        try {
+            return customers.size() > 1 ? customers : customers.get(0);
+        } catch (Exception e) {
+            return "No element";
+        }
+    }
+
+    @GetMapping("/customer/login")
+    public ResponseEntity login() {
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    @PostMapping("customer/login")
+    public ResponseEntity login(@RequestBody CustomerDto customerDto) {
+        Customer customer = customerService.findLoggingUser(customerDto.getNumber(), customerDto.getPassword());
+        if (customer != null) {
+            return ResponseEntity.ok(HttpStatus.OK);
+        } else {
+            return ResponseEntity.ok(HttpStatus.FORBIDDEN);
+        }
     }
 }

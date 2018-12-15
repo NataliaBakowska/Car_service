@@ -1,6 +1,8 @@
 package pl.web.service.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.RandomStringUtils;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -29,6 +31,8 @@ public class Customer {
     @JsonProperty("lastName")
     private String lastName;
 
+    private String password;
+
     public Customer() {
     }
 
@@ -40,6 +44,14 @@ public class Customer {
 
     public List<Car> getCars() {
         return cars;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override

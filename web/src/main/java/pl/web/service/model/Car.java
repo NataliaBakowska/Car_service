@@ -32,6 +32,7 @@ public class Car {
 
     @ManyToOne
     @JsonProperty("customer")
+    @JsonIgnore
     private Customer customer;
 
     @OneToMany(mappedBy = "car")

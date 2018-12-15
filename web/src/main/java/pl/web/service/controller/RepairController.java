@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.web.service.model.Repair;
 import pl.web.service.repository.RepairRepository;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.List;
 

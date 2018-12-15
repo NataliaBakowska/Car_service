@@ -21,7 +21,9 @@ public class AppStart implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         Customer customer1 = new Customer(123456789L, "test", "test");
+        customer1.setPassword(customerService.generatePassword());
         Customer customer2 = new Customer(111111111L, "test2", "test2");
+        customer2.setPassword(customerService.generatePassword());
         customerService.saveCustomer(customer1);
         customerService.saveCustomer(customer2);
 

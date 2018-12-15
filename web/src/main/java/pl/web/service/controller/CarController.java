@@ -38,5 +38,9 @@ public class CarController {
         return carRepository.findAll();
     }
 
+    //lista naprw użytkownika + car
+    //użytkownik po imieniu i nazwisku
+    //wszystkie naprawy
+    //lista napraw dla użytkownika po nazwisku lub lista użytkowników o nazwisku
 
 }
