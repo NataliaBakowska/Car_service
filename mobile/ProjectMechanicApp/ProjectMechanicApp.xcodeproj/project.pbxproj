@@ -20,6 +20,7 @@
 		3C434C1B21ADAB2500888D39 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C434C1A21ADAB2500888D39 /* MainViewController.swift */; };
 		3C434C1E21ADB64D00888D39 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C434C1D21ADB64D00888D39 /* Constans.swift */; };
 		3C434C2021ADC0F400888D39 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C434C1F21ADC0F400888D39 /* CustomNavigationBar.swift */; };
+		3CE9B08821C5068D00CE047E /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B08721C5068D00CE047E /* ContactViewController.swift */; };
 		4E60B9EE51E4B20AEAEB79E2 /* Pods_ProjectMechanicAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3E599F299B0AEE64411B73 /* Pods_ProjectMechanicAppTests.framework */; };
 		B9B135C3CD88EA7396260439 /* Pods_ProjectMechanicAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564D4333CA921B8BFD94BEC6 /* Pods_ProjectMechanicAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		3C434C1A21ADAB2500888D39 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3C434C1D21ADB64D00888D39 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		3C434C1F21ADC0F400888D39 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		3CE9B08721C5068D00CE047E /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		4C3E599F299B0AEE64411B73 /* Pods_ProjectMechanicAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectMechanicAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		564D4333CA921B8BFD94BEC6 /* Pods_ProjectMechanicAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectMechanicAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF98F3440FE3D4A08AB7299 /* Pods-ProjectMechanicAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectMechanicAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectMechanicAppTests/Pods-ProjectMechanicAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				3C434BEA21AD984400888D39 /* LoginViewController.swift */,
 				3C3AC12221B42C2B007B79CB /* MenuViewController.swift */,
+				3CE9B08721C5068D00CE047E /* ContactViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C434C2021ADC0F400888D39 /* CustomNavigationBar.swift in Sources */,
+				3CE9B08821C5068D00CE047E /* ContactViewController.swift in Sources */,
 				3C434BEB21AD984400888D39 /* LoginViewController.swift in Sources */,
 				3C434BF121AD984500888D39 /* ProjectMechanicApp.xcdatamodeld in Sources */,
 				3C3AC12321B42C2B007B79CB /* MenuViewController.swift in Sources */,
