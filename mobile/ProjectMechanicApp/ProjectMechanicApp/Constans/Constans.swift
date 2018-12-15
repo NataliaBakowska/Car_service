@@ -14,3 +14,7 @@ struct Colors {
     static let black = #colorLiteral(red: 0.1490196078, green: 0.1490196078, blue: 0.1490196078, alpha: 1)
     static let grey = #colorLiteral(red: 0.893655479, green: 0.8943349719, blue: 0.8937607408, alpha: 1)
 }
+
+struct CellIdentifier {
+    static let history = "historyTableViewCells"
+}
