@@ -22,6 +22,9 @@
 		3C434C2021ADC0F400888D39 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C434C1F21ADC0F400888D39 /* CustomNavigationBar.swift */; };
 		3CC1CD5621CFDBB500A03C33 /* CurrentRepairsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD5521CFDBB500A03C33 /* CurrentRepairsViewController.swift */; };
 		3CC1CD5821CFDDFD00A03C33 /* CurrentRepairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD5721CFDDFD00A03C33 /* CurrentRepairTableViewCell.swift */; };
+		3CC1CD5B21CFEB8400A03C33 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD5A21CFEB8400A03C33 /* CarModel.swift */; };
+		3CC1CD5D21CFEBA400A03C33 /* CustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD5C21CFEBA400A03C33 /* CustomerModel.swift */; };
+		3CC1CD6121CFEBDE00A03C33 /* RepairModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD6021CFEBDE00A03C33 /* RepairModel.swift */; };
 		3CE9B08821C5068D00CE047E /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B08721C5068D00CE047E /* ContactViewController.swift */; };
 		3CE9B08B21C5110000CE047E /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B08A21C5110000CE047E /* HistoryTableViewCell.swift */; };
 		3CE9B08D21C5163C00CE047E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B08C21C5163C00CE047E /* HistoryViewController.swift */; };
@@ -69,6 +72,9 @@
 		3C434C1F21ADC0F400888D39 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		3CC1CD5521CFDBB500A03C33 /* CurrentRepairsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRepairsViewController.swift; sourceTree = "<group>"; };
 		3CC1CD5721CFDDFD00A03C33 /* CurrentRepairTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRepairTableViewCell.swift; sourceTree = "<group>"; };
+		3CC1CD5A21CFEB8400A03C33 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		3CC1CD5C21CFEBA400A03C33 /* CustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerModel.swift; sourceTree = "<group>"; };
+		3CC1CD6021CFEBDE00A03C33 /* RepairModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairModel.swift; sourceTree = "<group>"; };
 		3CE9B08721C5068D00CE047E /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		3CE9B08A21C5110000CE047E /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		3CE9B08C21C5163C00CE047E /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +152,7 @@
 		3C434BE721AD984400888D39 /* ProjectMechanicApp */ = {
 			isa = PBXGroup;
 			children = (
+				3CC1CD5921CFEB7000A03C33 /* Models */,
 				3CE9B08921C510C100CE047E /* Cells */,
 				3C3AC12121B42C05007B79CB /* ViewControllers */,
 				3C434C1C21ADB60400888D39 /* Constans */,
@@ -193,6 +200,16 @@
 				3C434C1D21ADB64D00888D39 /* Constans.swift */,
 			);
 			path = Constans;
+			sourceTree = "<group>";
+		};
+		3CC1CD5921CFEB7000A03C33 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3CC1CD5A21CFEB8400A03C33 /* CarModel.swift */,
+				3CC1CD5C21CFEBA400A03C33 /* CustomerModel.swift */,
+				3CC1CD6021CFEBDE00A03C33 /* RepairModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3CE9B08921C510C100CE047E /* Cells */ = {
@@ -439,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC1CD6121CFEBDE00A03C33 /* RepairModel.swift in Sources */,
 				3CE9B08B21C5110000CE047E /* HistoryTableViewCell.swift in Sources */,
 				3C434C2021ADC0F400888D39 /* CustomNavigationBar.swift in Sources */,
 				3CC1CD5621CFDBB500A03C33 /* CurrentRepairsViewController.swift in Sources */,
@@ -449,6 +467,8 @@
 				3C3AC12321B42C2B007B79CB /* MenuViewController.swift in Sources */,
 				3CC1CD5821CFDDFD00A03C33 /* CurrentRepairTableViewCell.swift in Sources */,
 				3C434C1E21ADB64D00888D39 /* Constans.swift in Sources */,
+				3CC1CD5B21CFEB8400A03C33 /* CarModel.swift in Sources */,
+				3CC1CD5D21CFEBA400A03C33 /* CustomerModel.swift in Sources */,
 				3C434BE921AD984400888D39 /* AppDelegate.swift in Sources */,
 				3C434C1B21ADAB2500888D39 /* MainViewController.swift in Sources */,
 			);
