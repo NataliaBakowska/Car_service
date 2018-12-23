@@ -38,6 +38,9 @@ public class Repair {
     @JsonProperty("costs")
     private Double costs;
 
+    @JsonProperty("description")
+    private String description;
+
     public Repair() {
     }
 
@@ -45,6 +48,14 @@ public class Repair {
         this.car = car;
         this.startDate = startDate;
         this.costs = costs;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
@@ -56,6 +67,7 @@ public class Repair {
                 ", endDate=" + endDate +
                 ", units='" + units + '\'' +
                 ", costs=" + costs +
+                ", description=" + description +
                 '}';
     }
 }
