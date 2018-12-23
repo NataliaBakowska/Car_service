@@ -25,6 +25,10 @@
 		3CC1CD5B21CFEB8400A03C33 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD5A21CFEB8400A03C33 /* CarModel.swift */; };
 		3CC1CD5D21CFEBA400A03C33 /* CustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD5C21CFEBA400A03C33 /* CustomerModel.swift */; };
 		3CC1CD6121CFEBDE00A03C33 /* RepairModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD6021CFEBDE00A03C33 /* RepairModel.swift */; };
+		3CC1CD6321CFFC5D00A03C33 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD6221CFFC5D00A03C33 /* Extensions.swift */; };
+		3CC1CD6B21D010D400A03C33 /* AddNotificationDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD6921D010D400A03C33 /* AddNotificationDialog.swift */; };
+		3CC1CD6C21D010D400A03C33 /* AddNotificationDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC1CD6A21D010D400A03C33 /* AddNotificationDialog.xib */; };
+		3CC1CD6E21D0141000A03C33 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD6D21D0141000A03C33 /* NotificationsViewController.swift */; };
 		3CE9B08821C5068D00CE047E /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B08721C5068D00CE047E /* ContactViewController.swift */; };
 		3CE9B08B21C5110000CE047E /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B08A21C5110000CE047E /* HistoryTableViewCell.swift */; };
 		3CE9B08D21C5163C00CE047E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B08C21C5163C00CE047E /* HistoryViewController.swift */; };
@@ -75,6 +79,10 @@
 		3CC1CD5A21CFEB8400A03C33 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
 		3CC1CD5C21CFEBA400A03C33 /* CustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerModel.swift; sourceTree = "<group>"; };
 		3CC1CD6021CFEBDE00A03C33 /* RepairModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepairModel.swift; sourceTree = "<group>"; };
+		3CC1CD6221CFFC5D00A03C33 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3CC1CD6921D010D400A03C33 /* AddNotificationDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotificationDialog.swift; sourceTree = "<group>"; };
+		3CC1CD6A21D010D400A03C33 /* AddNotificationDialog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNotificationDialog.xib; sourceTree = "<group>"; };
+		3CC1CD6D21D0141000A03C33 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		3CE9B08721C5068D00CE047E /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		3CE9B08A21C5110000CE047E /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		3CE9B08C21C5163C00CE047E /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +131,7 @@
 				3CE9B08721C5068D00CE047E /* ContactViewController.swift */,
 				3CE9B08C21C5163C00CE047E /* HistoryViewController.swift */,
 				3CC1CD5521CFDBB500A03C33 /* CurrentRepairsViewController.swift */,
+				3CC1CD6D21D0141000A03C33 /* NotificationsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -152,6 +161,7 @@
 		3C434BE721AD984400888D39 /* ProjectMechanicApp */ = {
 			isa = PBXGroup;
 			children = (
+				3CC1CD6421D0106800A03C33 /* Dialogs */,
 				3CC1CD5921CFEB7000A03C33 /* Models */,
 				3CE9B08921C510C100CE047E /* Cells */,
 				3C3AC12121B42C05007B79CB /* ViewControllers */,
@@ -163,6 +173,7 @@
 				3C434BF421AD984600888D39 /* LaunchScreen.storyboard */,
 				3C434BF721AD984600888D39 /* Info.plist */,
 				3C434BEF21AD984500888D39 /* ProjectMechanicApp.xcdatamodeld */,
+				3CC1CD6221CFFC5D00A03C33 /* Extensions.swift */,
 			);
 			path = ProjectMechanicApp;
 			sourceTree = "<group>";
@@ -210,6 +221,15 @@
 				3CC1CD6021CFEBDE00A03C33 /* RepairModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3CC1CD6421D0106800A03C33 /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				3CC1CD6921D010D400A03C33 /* AddNotificationDialog.swift */,
+				3CC1CD6A21D010D400A03C33 /* AddNotificationDialog.xib */,
+			);
+			path = Dialogs;
 			sourceTree = "<group>";
 		};
 		3CE9B08921C510C100CE047E /* Cells */ = {
@@ -354,6 +374,7 @@
 			files = (
 				3C434BF621AD984600888D39 /* LaunchScreen.storyboard in Resources */,
 				3C434BF321AD984600888D39 /* Assets.xcassets in Resources */,
+				3CC1CD6C21D010D400A03C33 /* AddNotificationDialog.xib in Resources */,
 				3C434BEE21AD984400888D39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,8 +486,11 @@
 				3C434BEB21AD984400888D39 /* LoginViewController.swift in Sources */,
 				3C434BF121AD984500888D39 /* ProjectMechanicApp.xcdatamodeld in Sources */,
 				3C3AC12321B42C2B007B79CB /* MenuViewController.swift in Sources */,
+				3CC1CD6E21D0141000A03C33 /* NotificationsViewController.swift in Sources */,
 				3CC1CD5821CFDDFD00A03C33 /* CurrentRepairTableViewCell.swift in Sources */,
 				3C434C1E21ADB64D00888D39 /* Constans.swift in Sources */,
+				3CC1CD6321CFFC5D00A03C33 /* Extensions.swift in Sources */,
+				3CC1CD6B21D010D400A03C33 /* AddNotificationDialog.swift in Sources */,
 				3CC1CD5B21CFEB8400A03C33 /* CarModel.swift in Sources */,
 				3CC1CD5D21CFEBA400A03C33 /* CustomerModel.swift in Sources */,
 				3C434BE921AD984400888D39 /* AppDelegate.swift in Sources */,

@@ -15,16 +15,14 @@ class CarModel: NSObject{
     var model: String?
     var productionYear: Int?
     var registrationNumber: String?
-    var customer: CustomerModel?
     var repairs: [RepairModel]?
     
-    init(id: Int?, brand: String?, model: String?, productionYear: Int?, registrationNumber: String?, customer: CustomerModel?, repairs: [RepairModel]?){
+    init(id: Int?, brand: String?, model: String?, productionYear: Int?, registrationNumber: String?, repairs: [RepairModel]?){
         self.id = id
         self.brand = brand
         self.model = model
         self.productionYear = productionYear
         self.registrationNumber = registrationNumber
-        self.customer = customer
         self.repairs = repairs
     }
 }

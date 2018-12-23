@@ -10,6 +10,11 @@ import UIKit
 
 class CurrentRepairTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var carName: UILabel!
+    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var desctiptionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,8 +26,11 @@ class CurrentRepairTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func loadData() {
-        print("panda")
+    func loadData(car: CarModel!, indexPathRow: Int) {
+        self.carName.text = car.brand! + " " + car.model!
+        self.time.text = car.repairs![indexPathRow].endDate?.toString()
+        self.desctiptionLabel.text = "opis: " + car.repairs![indexPathRow].descriptionString!
+        self.priceLabel.text = String(format: "%.2f zł", car.repairs![indexPathRow].costs!)
     }
 
 }

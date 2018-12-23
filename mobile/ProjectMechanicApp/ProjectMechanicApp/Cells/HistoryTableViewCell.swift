@@ -12,7 +12,7 @@ class HistoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var carName: UILabel!
     @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var desctiption: UILabel!
+    @IBOutlet weak var desctiptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,8 +23,10 @@ class HistoryTableViewCell: UITableViewCell {
 
     }
     
-    func loadData() {
-        print("bedzie")
+    func loadData(car: CarModel!, indexPathRow: Int) {
+        self.carName.text = car.brand! + " " + car.model!
+        self.time.text = car.repairs![indexPathRow].endDate?.toString()
+        self.desctiptionLabel.text = "opis: " + car.repairs![indexPathRow].descriptionString!
     }
 
 }
