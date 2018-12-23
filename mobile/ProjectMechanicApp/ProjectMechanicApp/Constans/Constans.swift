@@ -16,5 +16,6 @@ struct Colors {
 }
 
 struct CellIdentifier {
-    static let history = "historyTableViewCells"
+    static let history = "historyTableViewCell"
+    static let currentRepair = "currentRepairTableViewCell"
 }
