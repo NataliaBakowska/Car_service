@@ -8,10 +8,13 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import UserNotifications
 
 class AddNotificationDialog: UIViewController {
 
     @IBOutlet weak var datePickerTextField: SkyFloatingLabelTextField!
+    let center = UNUserNotificationCenter.current()
+    
     
     init() {
         super.init(nibName: nil, bundle: nil)

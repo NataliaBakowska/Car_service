@@ -16,6 +16,12 @@ class NotificationsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        LocalNotification.registerForLocalNotification(on: UIApplication.shared)
+    }
+
+    
     @IBAction func addNotificationButtonAction(_ sender: Any) {
         let dialog = AddNotificationDialog()
         self.present(dialog, animated: true)

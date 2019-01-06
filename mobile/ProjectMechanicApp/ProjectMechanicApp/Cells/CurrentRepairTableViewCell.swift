@@ -30,7 +30,7 @@ class CurrentRepairTableViewCell: UITableViewCell {
         self.carName.text = car.brand! + " " + car.model!
         self.time.text = car.repairs![indexPathRow].endDate?.toString()
         self.desctiptionLabel.text = "opis: " + car.repairs![indexPathRow].descriptionString!
-        self.priceLabel.text = String(format: "%.2f zł", car.repairs![indexPathRow].costs!)
+        self.priceLabel.text = String(format: "Wycena: %.2f zł", car.repairs![indexPathRow].costs!)
     }
 
 }

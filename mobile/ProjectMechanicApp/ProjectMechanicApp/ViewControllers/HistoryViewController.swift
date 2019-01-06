@@ -24,6 +24,11 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.rowHeight = UITableViewAutomaticDimension
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        title = "HISTORIA NAPRAW"
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
@@ -33,4 +38,11 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.loadData(car: self.carModel, indexPathRow: 0)
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let car = carModel
+//        let detailsVC = DetailsHistoryViewController()
+//        detailsVC.carModel = car
+//        detailsVC.performSegue(withIdentifier: SegueIdentifier.details, sender: self)
+//    }
 }

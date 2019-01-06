@@ -21,10 +21,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tx1-DT-nEm">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tx1-DT-nEm">
                     <rect key="frame" x="16" y="205" width="343" height="277"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2u-sI-dvO">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2u-sI-dvO">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="60"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DODAJ PRZYPOMNIENIE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRr-FJ-tcg">
@@ -151,6 +151,14 @@
                         <constraint firstItem="53W-Ln-Q6P" firstAttribute="trailing" secondItem="3UU-fG-ukP" secondAttribute="trailing" id="tt1-M9-kbx"/>
                         <constraint firstAttribute="trailing" secondItem="2vZ-Xl-ebb" secondAttribute="trailing" constant="24" id="u3G-Bg-fBV"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.59627619760479045" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

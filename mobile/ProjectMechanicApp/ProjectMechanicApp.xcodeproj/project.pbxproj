@@ -20,6 +20,9 @@
 		3C434C1B21ADAB2500888D39 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C434C1A21ADAB2500888D39 /* MainViewController.swift */; };
 		3C434C1E21ADB64D00888D39 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C434C1D21ADB64D00888D39 /* Constans.swift */; };
 		3C434C2021ADC0F400888D39 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C434C1F21ADC0F400888D39 /* CustomNavigationBar.swift */; };
+		3C84143621E2580100940F1C /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84143521E2580100940F1C /* LocalNotification.swift */; };
+		3C84143821E25FA000940F1C /* DetailsHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84143721E25FA000940F1C /* DetailsHistoryViewController.swift */; };
+		3C84143A21E2649A00940F1C /* DetailsHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84143921E2649A00940F1C /* DetailsHistoryTableViewCell.swift */; };
 		3CC1CD5621CFDBB500A03C33 /* CurrentRepairsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD5521CFDBB500A03C33 /* CurrentRepairsViewController.swift */; };
 		3CC1CD5821CFDDFD00A03C33 /* CurrentRepairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD5721CFDDFD00A03C33 /* CurrentRepairTableViewCell.swift */; };
 		3CC1CD5B21CFEB8400A03C33 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1CD5A21CFEB8400A03C33 /* CarModel.swift */; };
@@ -74,6 +77,9 @@
 		3C434C1A21ADAB2500888D39 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3C434C1D21ADB64D00888D39 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		3C434C1F21ADC0F400888D39 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		3C84143521E2580100940F1C /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		3C84143721E25FA000940F1C /* DetailsHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHistoryViewController.swift; sourceTree = "<group>"; };
+		3C84143921E2649A00940F1C /* DetailsHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		3CC1CD5521CFDBB500A03C33 /* CurrentRepairsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRepairsViewController.swift; sourceTree = "<group>"; };
 		3CC1CD5721CFDDFD00A03C33 /* CurrentRepairTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRepairTableViewCell.swift; sourceTree = "<group>"; };
 		3CC1CD5A21CFEB8400A03C33 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
@@ -132,6 +138,7 @@
 				3CE9B08C21C5163C00CE047E /* HistoryViewController.swift */,
 				3CC1CD5521CFDBB500A03C33 /* CurrentRepairsViewController.swift */,
 				3CC1CD6D21D0141000A03C33 /* NotificationsViewController.swift */,
+				3C84143721E25FA000940F1C /* DetailsHistoryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -161,6 +168,7 @@
 		3C434BE721AD984400888D39 /* ProjectMechanicApp */ = {
 			isa = PBXGroup;
 			children = (
+				3C84143421E257DB00940F1C /* Utils+Extensions */,
 				3CC1CD6421D0106800A03C33 /* Dialogs */,
 				3CC1CD5921CFEB7000A03C33 /* Models */,
 				3CE9B08921C510C100CE047E /* Cells */,
@@ -213,6 +221,14 @@
 			path = Constans;
 			sourceTree = "<group>";
 		};
+		3C84143421E257DB00940F1C /* Utils+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C84143521E2580100940F1C /* LocalNotification.swift */,
+			);
+			path = "Utils+Extensions";
+			sourceTree = "<group>";
+		};
 		3CC1CD5921CFEB7000A03C33 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +253,7 @@
 			children = (
 				3CE9B08A21C5110000CE047E /* HistoryTableViewCell.swift */,
 				3CC1CD5721CFDDFD00A03C33 /* CurrentRepairTableViewCell.swift */,
+				3C84143921E2649A00940F1C /* DetailsHistoryTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -477,17 +494,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C84143A21E2649A00940F1C /* DetailsHistoryTableViewCell.swift in Sources */,
 				3CC1CD6121CFEBDE00A03C33 /* RepairModel.swift in Sources */,
 				3CE9B08B21C5110000CE047E /* HistoryTableViewCell.swift in Sources */,
 				3C434C2021ADC0F400888D39 /* CustomNavigationBar.swift in Sources */,
 				3CC1CD5621CFDBB500A03C33 /* CurrentRepairsViewController.swift in Sources */,
 				3CE9B08821C5068D00CE047E /* ContactViewController.swift in Sources */,
 				3CE9B08D21C5163C00CE047E /* HistoryViewController.swift in Sources */,
+				3C84143621E2580100940F1C /* LocalNotification.swift in Sources */,
 				3C434BEB21AD984400888D39 /* LoginViewController.swift in Sources */,
 				3C434BF121AD984500888D39 /* ProjectMechanicApp.xcdatamodeld in Sources */,
 				3C3AC12321B42C2B007B79CB /* MenuViewController.swift in Sources */,
 				3CC1CD6E21D0141000A03C33 /* NotificationsViewController.swift in Sources */,
 				3CC1CD5821CFDDFD00A03C33 /* CurrentRepairTableViewCell.swift in Sources */,
+				3C84143821E25FA000940F1C /* DetailsHistoryViewController.swift in Sources */,
 				3C434C1E21ADB64D00888D39 /* Constans.swift in Sources */,
 				3CC1CD6321CFFC5D00A03C33 /* Extensions.swift in Sources */,
 				3CC1CD6B21D010D400A03C33 /* AddNotificationDialog.swift in Sources */,
