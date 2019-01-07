@@ -45,6 +45,14 @@ public class Car {
     public Car() {
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
     public Car(String brand, String model, int productionYear, String registrationNumber, Customer customer, String vin) {
         this.brand = brand;
         this.model = model;

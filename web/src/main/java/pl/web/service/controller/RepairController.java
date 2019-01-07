@@ -5,9 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.web.service.model.Repair;
+import pl.web.service.repository.CarRepository;
 import pl.web.service.repository.RepairRepository;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
 import java.util.List;
 
 @RestController
@@ -16,13 +15,18 @@ public class RepairController {
     @Autowired
     private RepairRepository repairRepository;
 
-    @GetMapping("/repair/save")
+    @Autowired
+    private CarRepository carRepository;
+
+
+    @GetMapping("/repair/save/{carId}")
     private ResponseEntity saveRepair() {
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
-    @PostMapping("/repair/save")
-    public ResponseEntity saveRepair (@RequestBody Repair repair) {
+    @PostMapping("/repair/save/{carId}")
+    public ResponseEntity saveRepair (@RequestBody Repair repair, @PathVariable Long carId) {
+        repair.setCar(carRepository.findById(carId).get());
         repairRepository.save(repair);
         return ResponseEntity.ok(HttpStatus.OK);
     }
@@ -35,7 +39,13 @@ public class RepairController {
 
     @GetMapping("/repair/all")
     @ResponseBody
-    public List<Repair> getllRepairs() {
+    public List<Repair> getAllRepairs() {
         return repairRepository.findAll();
+    }
+
+    @GetMapping("/repair/all/{carId}")
+    @ResponseBody
+    public List<Repair> getAllRepairsForCar(@PathVariable Long carId) {
+        return repairRepository.findAllByCarId(carId);
     }
 }

@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.web.service.model.Car;
 import pl.web.service.repository.CarRepository;
+import pl.web.service.repository.CustomerRepository;
 
 import java.util.List;
 
@@ -15,13 +16,17 @@ public class CarController {
     @Autowired
     private CarRepository carRepository;
 
-    @GetMapping("car/save")
+    @Autowired
+    private CustomerRepository customerRepository;
+
+    @GetMapping("car/save/{customerId}")
     private ResponseEntity saveCar() {
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
-    @PostMapping("/car/save")
-    public ResponseEntity saveCar(@RequestBody Car car) {
+    @PostMapping("/car/save/{customerId}")
+    public ResponseEntity saveCar(@RequestBody Car car, @PathVariable Long customerId) {
+        car.setCustomer(customerRepository.findById(customerId).get());
         carRepository.save(car);
         return ResponseEntity.ok(HttpStatus.OK);
     }
@@ -38,9 +43,10 @@ public class CarController {
         return carRepository.findAll();
     }
 
-    //lista naprw użytkownika + car
-    //użytkownik po imieniu i nazwisku
-    //wszystkie naprawy
-    //lista napraw dla użytkownika po nazwisku lub lista użytkowników o nazwisku
+    @GetMapping("/car/all/{userId}")
+    @ResponseBody
+    public List<Car> getAllCarsForUser(@PathVariable Long userId) {
+        return carRepository.findAllByCustomerId(userId);
+    }
 
 }
