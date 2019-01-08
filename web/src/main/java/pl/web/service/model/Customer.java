@@ -1,5 +1,6 @@
 package pl.web.service.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.RandomStringUtils;
 
@@ -19,7 +20,7 @@ public class Customer {
     private Long id;
 
     @OneToMany(mappedBy = "customer")
-    @JsonProperty("cars")
+    @JsonIgnore
     private List<Car> cars;
 
     @JsonProperty("telephoneNumber")
@@ -31,6 +32,7 @@ public class Customer {
     @JsonProperty("lastName")
     private String lastName;
 
+    @JsonIgnore
     private String password;
 
     public Customer() {
@@ -52,6 +54,38 @@ public class Customer {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getTelephoneNumber() {
+        return telephoneNumber;
+    }
+
+    public void setTelephoneNumber(Long telephoneNumber) {
+        this.telephoneNumber = telephoneNumber;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Override

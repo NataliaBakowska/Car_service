@@ -1,16 +1,23 @@
 package pl.web.service.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 
+import netscape.javascript.JSObject;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.lang.Nullable;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.web.service.model.Customer;
 import pl.web.service.model.CustomerDto;
 import pl.web.service.service.CustomerService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -38,7 +45,7 @@ public class CustomerController {
     /**
      * Get a customer by id
      * @param id
-     * @return
+     * @return customer WITHOUT assigned cars
      */
     @GetMapping("/customer/{id}")
     @ResponseBody
@@ -48,6 +55,7 @@ public class CustomerController {
 
     /**
      * Get all customers
+     * @return customer WITHOUT assigned cars
      */
     @GetMapping("/customer/all")
     @ResponseBody
@@ -82,13 +90,12 @@ public class CustomerController {
     }
 
     @PostMapping("customer/login")
-    public ResponseEntity login(Model model, @RequestBody CustomerDto customerDto) {
+    public Object login(@RequestBody CustomerDto customerDto) throws JsonProcessingException {
         Customer customer = customerService.findLoggingUser(customerDto.getNumber(), customerDto.getPassword());
         if (customer != null) {
-            model.addAttribute(customer);
-            return ResponseEntity.ok(HttpStatus.OK);
+            return new ResponseEntity<Object>(customer, HttpStatus.OK);
         } else {
-            return ResponseEntity.ok(HttpStatus.FORBIDDEN);
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
     }
 }

@@ -1,5 +1,6 @@
 package pl.web.service.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
@@ -22,14 +23,14 @@ public class Repair {
     private Long id;
 
     @ManyToOne
-    @JsonProperty("car")
+    @JsonIgnore
     private Car car;
 
     @JsonProperty("startDate")
-    private DateTime startDate;
+    private String startDate;
 
     @JsonProperty("endDate")
-    private DateTime endDate;
+    private String endDate;
 
     //possible change to List<Units>
     @JsonProperty("units")
@@ -44,7 +45,7 @@ public class Repair {
     public Repair() {
     }
 
-    public Repair(Car car, DateTime startDate, Double costs) {
+    public Repair(Car car, String startDate, Double costs) {
         this.car = car;
         this.startDate = startDate;
         this.costs = costs;

@@ -31,7 +31,6 @@ public class Car {
     private String registrationNumber;
 
     @ManyToOne
-    @JsonProperty("customer")
     @JsonIgnore
     private Customer customer;
 
