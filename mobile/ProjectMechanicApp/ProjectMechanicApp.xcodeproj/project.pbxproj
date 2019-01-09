@@ -35,6 +35,9 @@
 		3CE9B08821C5068D00CE047E /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B08721C5068D00CE047E /* ContactViewController.swift */; };
 		3CE9B08B21C5110000CE047E /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B08A21C5110000CE047E /* HistoryTableViewCell.swift */; };
 		3CE9B08D21C5163C00CE047E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9B08C21C5163C00CE047E /* HistoryViewController.swift */; };
+		3CF560E921E679F600D6F613 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF560E821E679F600D6F613 /* Utils.swift */; };
+		3CF560EB21E67C0900D6F613 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF560EA21E67C0900D6F613 /* NotificationTableViewCell.swift */; };
+		3CF9F94621E66DB900B9C4B2 /* CustomToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF9F94521E66DB900B9C4B2 /* CustomToast.swift */; };
 		4E60B9EE51E4B20AEAEB79E2 /* Pods_ProjectMechanicAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3E599F299B0AEE64411B73 /* Pods_ProjectMechanicAppTests.framework */; };
 		B9B135C3CD88EA7396260439 /* Pods_ProjectMechanicAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 564D4333CA921B8BFD94BEC6 /* Pods_ProjectMechanicAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +95,9 @@
 		3CE9B08721C5068D00CE047E /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		3CE9B08A21C5110000CE047E /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		3CE9B08C21C5163C00CE047E /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		3CF560E821E679F600D6F613 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		3CF560EA21E67C0900D6F613 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		3CF9F94521E66DB900B9C4B2 /* CustomToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToast.swift; sourceTree = "<group>"; };
 		4C3E599F299B0AEE64411B73 /* Pods_ProjectMechanicAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectMechanicAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		564D4333CA921B8BFD94BEC6 /* Pods_ProjectMechanicAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectMechanicAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF98F3440FE3D4A08AB7299 /* Pods-ProjectMechanicAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectMechanicAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectMechanicAppTests/Pods-ProjectMechanicAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				3C84143521E2580100940F1C /* LocalNotification.swift */,
+				3CF9F94521E66DB900B9C4B2 /* CustomToast.swift */,
+				3CF560E821E679F600D6F613 /* Utils.swift */,
 			);
 			path = "Utils+Extensions";
 			sourceTree = "<group>";
@@ -254,6 +262,7 @@
 				3CE9B08A21C5110000CE047E /* HistoryTableViewCell.swift */,
 				3CC1CD5721CFDDFD00A03C33 /* CurrentRepairTableViewCell.swift */,
 				3C84143921E2649A00940F1C /* DetailsHistoryTableViewCell.swift */,
+				3CF560EA21E67C0900D6F613 /* NotificationTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -494,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF9F94621E66DB900B9C4B2 /* CustomToast.swift in Sources */,
 				3C84143A21E2649A00940F1C /* DetailsHistoryTableViewCell.swift in Sources */,
 				3CC1CD6121CFEBDE00A03C33 /* RepairModel.swift in Sources */,
 				3CE9B08B21C5110000CE047E /* HistoryTableViewCell.swift in Sources */,
@@ -505,9 +515,11 @@
 				3C434BEB21AD984400888D39 /* LoginViewController.swift in Sources */,
 				3C434BF121AD984500888D39 /* ProjectMechanicApp.xcdatamodeld in Sources */,
 				3C3AC12321B42C2B007B79CB /* MenuViewController.swift in Sources */,
+				3CF560EB21E67C0900D6F613 /* NotificationTableViewCell.swift in Sources */,
 				3CC1CD6E21D0141000A03C33 /* NotificationsViewController.swift in Sources */,
 				3CC1CD5821CFDDFD00A03C33 /* CurrentRepairTableViewCell.swift in Sources */,
 				3C84143821E25FA000940F1C /* DetailsHistoryViewController.swift in Sources */,
+				3CF560E921E679F600D6F613 /* Utils.swift in Sources */,
 				3C434C1E21ADB64D00888D39 /* Constans.swift in Sources */,
 				3CC1CD6321CFFC5D00A03C33 /* Extensions.swift in Sources */,
 				3CC1CD6B21D010D400A03C33 /* AddNotificationDialog.swift in Sources */,

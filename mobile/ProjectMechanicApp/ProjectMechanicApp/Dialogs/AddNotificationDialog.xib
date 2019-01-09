@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddNotificationDialog" customModule="ProjectMechanicApp" customModuleProvider="target">
             <connections>
                 <outlet property="datePickerTextField" destination="53W-Ln-Q6P" id="nPw-u6-8Cl"/>
+                <outlet property="titleTextField" destination="3UU-fG-ukP" id="kX6-zW-OR7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
