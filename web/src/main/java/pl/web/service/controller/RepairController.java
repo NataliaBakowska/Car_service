@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.*;
 import pl.web.service.model.Repair;
 import pl.web.service.repository.CarRepository;
 import pl.web.service.repository.RepairRepository;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -34,6 +38,30 @@ public class RepairController {
     @PostMapping("/repair/save/{carId}")
     public ResponseEntity saveRepair (@RequestBody Repair repair, @PathVariable Long carId) {
         repair.setCar(carRepository.findById(carId).get());
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date date = new Date();
+        repair.setStartDate(dateFormat.format(date));
+        repairRepository.save(repair);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    /**
+     * Edit repair with given id
+     * @param model
+     * @param id
+     * @return
+     */
+    @GetMapping("/repair/edit/{id}")
+    private ResponseEntity editRepair(Model model, @PathVariable Long id) {
+        model.addAttribute("id",id);
+        return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    @PostMapping("/repair/edit/{id}")
+    public ResponseEntity editRepair (@RequestBody Repair repair, @PathVariable Long id) {
+        Repair oldRepair  = repairRepository.findById(id).get();
+        repair.setId(oldRepair.getId());
+        repair.setStartDate(oldRepair.getStartDate());
         repairRepository.save(repair);
         return ResponseEntity.ok(HttpStatus.OK);
     }
