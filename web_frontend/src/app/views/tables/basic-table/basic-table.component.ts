@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-basic-table',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicTableComponent implements OnInit {
 
-  constructor() { }
+  public ordersArray: any = [];
+  constructor(private http: HttpClient) {
+
+    this.getListOfOrders();
+  }
 
   ngOnInit() {
+  }
+
+  getListOfOrders() {
+    this.http.get('http://192.168.43.178:8080/customer/all').subscribe(onFullFiled => {
+     console.log(onFullFiled);
+    }, onRejected => {
+
+    });
   }
 
 }

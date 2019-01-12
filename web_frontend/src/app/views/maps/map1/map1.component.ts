@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-map1',
@@ -6,11 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./map1.component.scss']
 })
 export class Map1Component implements OnInit {
-  public map: any = { lat: 51.678418, lng: 7.809007 };
-  
-  constructor() { }
+
+  public customers: any = [];
+  constructor(private http: HttpClient) {
+    this.getListOfUsers();
+  }
 
   ngOnInit() {
   }
 
+
+
+  getListOfUsers() {
+    this.http.get('http://192.168.43.178:8080/customer/all').subscribe(onFullFiled => {
+      this.customers = onFullFiled;
+      console.log(this.customers);
+    }, onRejected => {
+
+    });
+  }
 }

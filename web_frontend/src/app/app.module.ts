@@ -10,6 +10,7 @@ import { AppRoutes } from './app.routes.service';
 import { ViewsModule } from './views/views.module';
 import { SharedModule } from './shared/shared.module';
 import { ErrorModule } from './views/errors/error.module';
+import { HttpClientModule } from '@angular/common/http';
 
 // main layout
 import { NavigationModule } from './main-layout/navigation/navigation.module';
@@ -22,6 +23,7 @@ import { NavigationModule } from './main-layout/navigation/navigation.module';
     AgmCoreModule.forRoot({
       apiKey: ''
     }),
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     NavigationModule,
@@ -31,11 +33,11 @@ import { NavigationModule } from './main-layout/navigation/navigation.module';
     SharedModule,
     ViewsModule,
     ErrorModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
