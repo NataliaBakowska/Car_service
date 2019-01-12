@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CarModel: NSObject{
+class CarModel: NSObject {
     
     var id: Int?
     var brand: String?

@@ -49,6 +49,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="123456789"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="guq-Mg-wTd" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
@@ -82,6 +83,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="JoCtEz"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6h-cC-8Gz">
@@ -102,7 +104,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="pqS-K6-y0m" kind="show" id="zXU-FG-pqd"/>
+                                    <segue destination="pqS-K6-y0m" kind="show" identifier="login" id="zXU-FG-pqd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,6 +123,10 @@
                         <viewLayoutGuide key="safeArea" id="avC-dY-9IR"/>
                     </view>
                     <navigationItem key="navigationItem" title="CAR SERVICE" largeTitleDisplayMode="always" id="KB0-uM-5tr"/>
+                    <connections>
+                        <outlet property="numberLabel" destination="jqt-MY-riG" id="Weu-QA-Y2h"/>
+                        <outlet property="passwordLabel" destination="guq-Mg-wTd" id="Ufi-8P-Lbd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9F0-90-h58" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

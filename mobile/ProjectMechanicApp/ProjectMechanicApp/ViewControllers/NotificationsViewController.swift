@@ -19,13 +19,15 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getNotifications()
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.reloadData()
+        getNotifications(completion: {
+            self.tableView.reloadData()
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,8 +37,9 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         title = "HISTORIA NAPRAW"
-        getNotifications()
-        self.tableView.reloadData()
+        getNotifications(completion: {
+            self.tableView.reloadData()
+        })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,22 +52,28 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
         cell.dateLabel.text = notificationsArray[indexPath.row].content.body
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.buttonTappedAction = {
-            self.removeNotification(id: self.notificationsArray[indexPath.row].identifier)
-            self.tableView.reloadData()
+            self.removeNotification(id: self.notificationsArray[indexPath.row].identifier, completion: {
+                self.getNotifications {
+                    self.tableView.reloadData()
+                }
+            })
         }
         return cell
     }
     
     func refreshTableView() {
-        getNotifications()
+        getNotifications(completion: {
+            self.tableView.reloadData()
+        })
     }
     
     @IBAction func addNotificationButtonAction(_ sender: Any) {
         let dialog = AddNotificationDialog()
+        dialog.delegate = self
         self.present(dialog, animated: true)
     }
     
-    private func getNotifications() {
+    private func getNotifications(completion: @escaping ()->()) {
             self.center.getPendingNotificationRequests { (notifications) in
             if self.notificationsArray.count != 0 {
                 self.notificationsArray = []
@@ -74,19 +83,24 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
                 self.notificationsArray.append(item)
                 print(item.content)
             }
+                DispatchQueue.main.async {
+                    completion()
+                }
             
         }
     }
     
-    private func removeNotification(id: String) {
+    private func removeNotification(id: String, completion: @escaping ()->()) {
         center.getPendingNotificationRequests { (notifications) in
             print(notifications)
             for item in notifications {
                 if(item.identifier.contains(id)) {
                     self.center.removePendingNotificationRequests(withIdentifiers: [item.identifier])
                 }
+        }
+            DispatchQueue.main.async {
+                completion()
             }
-            self.getNotifications()
         }
     }
     

@@ -24,4 +24,9 @@ struct CellIdentifier {
 
 struct SegueIdentifier {
     static let details = "detailsIdentifier"
+    static let login = "login"
+}
+
+struct Request {
+    static let login = "http://192.168.43.178:8080/customer/login"
 }

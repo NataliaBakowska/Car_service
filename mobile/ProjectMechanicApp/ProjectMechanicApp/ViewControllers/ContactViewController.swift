@@ -15,6 +15,11 @@ class ContactViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 52.249714, longitude: 19.170164)
+        map.addAnnotation(annotation)
+        self.map.showAnnotations(self.map.annotations, animated: true)
 
     }
     

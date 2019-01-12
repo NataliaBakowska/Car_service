@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomerModel: NSObject{
+class CustomerModel: NSObject {
     
     var id: Int?
     var cars: [CarModel]?

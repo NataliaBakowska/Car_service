@@ -80,8 +80,10 @@ class AddNotificationDialog: UIViewController {
         let date = Date(timeIntervalSinceNow: dateTimeinterval)
         let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: true)
+        let trigger2 = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+
         let carReviewId = Utils.randomString(length: 10)
-        let request = UNNotificationRequest(identifier: carReviewId, content: notification, trigger: trigger)
+        let request = UNNotificationRequest(identifier: carReviewId, content: notification, trigger: trigger2)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         self.dismiss(animated: true) {
             self.delegate?.refreshTableView()

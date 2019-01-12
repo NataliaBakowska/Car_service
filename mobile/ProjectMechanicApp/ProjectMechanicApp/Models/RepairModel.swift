@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RepairModel: NSObject{
+class RepairModel: NSObject {
     
     var id: Int?
     var startDate: Date?
