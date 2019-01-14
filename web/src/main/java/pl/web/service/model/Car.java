@@ -52,6 +52,22 @@ public class Car {
         this.customer = customer;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getRegistrationNumber() {
+        return registrationNumber;
+    }
+
+    public void setRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
+    }
+
     public Car(String brand, String model, int productionYear, String registrationNumber, Customer customer, String vin) {
         this.brand = brand;
         this.model = model;
